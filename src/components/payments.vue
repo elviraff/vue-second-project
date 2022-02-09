@@ -1,5 +1,7 @@
 <template>
+
 <div class="wrapper">
+  <div>Total: {{gFPV}}</div>
   <div class="data_form">
     <span class="data_item">#</span>
     <span class="data_item">Data</span>
@@ -18,12 +20,25 @@
 </template>
 
 <script>
+
 export default {
   name:"paymentsDisplay",
+  components: {
+  },
+  computed: {
+  },
   props: {
     items: {
       type: Array,
       default: ()=>[],
+    },
+    pageNumber: {
+      type: Number
+    },
+    size: {
+      type: Number,
+      required: false,
+      default: 3
     }
   },
 }
